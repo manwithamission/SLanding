@@ -30,12 +30,12 @@ window.onload = () => {
     var PrevPatentButtons = [document.getElementById('prev8'), document.getElementById('prev9'), document.getElementById('prev10')];
     var NextPatentButtons = [document.getElementById('next8'), document.getElementById('next9'), document.getElementById('next10')];
 
-    showSlides(slideIndex, grids[0]);
+    showSlides(slideIndex, document.getElementById('grid-project'));
     
     for (var i = 0; i < PrevProjectButtons.length; i++) {
         PrevProjectButtons[i].onclick = ( () => {
             return () => {
-                plusSlides(-1, grids[0]);
+                plusSlides(-1, document.getElementById('grid-project'));
             }
         })(i);
     }
@@ -43,39 +43,43 @@ window.onload = () => {
     for (var i = 0; i < NextProjectButtons.length; i++) {
         NextProjectButtons[i].onclick = ( () => {
             return () => {
-                plusSlides(1, grids[0]);
+                plusSlides(1, document.getElementById('grid-project'));
             }
         })(i);
     }
 
     for (var i = 0; i < PrevGroupButtons.length; i++) {
+        showSlides(slideIndex, document.getElementById('grid-group'));
         PrevGroupButtons[i].onclick = ( () => {
             return () => {
-                plusSlides(-1, grids[1]);
+                plusSlides(-1, document.getElementById('grid-group'));
             }
         })(i);
     }
 
     for (var i = 0; i < NextGroupButtons.length; i++) {
+        showSlides(slideIndex, document.getElementById('grid-project'));
         NextGroupButtons[i].onclick = ( () => {
             return () => {
-                plusSlides(1, grids[1]);
+                plusSlides(1, document.getElementById('grid-group'));
             }
         })(i);
     }
 
     for (var i = 0; i < PrevPatentButtons.length; i++) {
+        showSlides(slideIndex, document.getElementById('grid-patent'));
         PrevPatentButtons[i].onclick = ( () => {
             return () => {
-                plusSlides(-1, grids[2]);
+                plusSlides(-1, document.getElementById('grid-patent'));
             }
         })(i);
     }
 
     for (var i = 0; i < NextPatentButtons.length; i++) {
+        showSlides(slideIndex, document.getElementById('grid-patent'));
         NextPatentButtons[i].onclick = ( () => {
             return () => {
-                plusSlides(1, grids[2]);
+                plusSlides(1, document.getElementById('grid-patent'));
             }
         })(i);
     }
@@ -90,19 +94,15 @@ window.onload = () => {
         console.log(parentslide);
         var slides = parentslide.getElementsByClassName('block_content');
         console.log(n, slides.length)
-
         if (n > slides.length) {
             slideIndex = 1
         }
-
         if (n < 1) {
             slideIndex = slides.length
         }
-
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-
         slides[slideIndex - 1].style.display = "grid";
     } 
 };

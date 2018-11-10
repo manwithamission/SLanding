@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700')
 $font-stack: 'Roboto', sans-serif
-$primary-color: #F0FFFF
+$primary-color: #adadad
     
 body 
     width: 100%
@@ -27,7 +27,7 @@ body
 .nav-list__item
     display: inline
     font: 16px $font-stack
-    color: white
+    color: $primary-color
 
 .main-overlay
     padding: 0
@@ -53,7 +53,7 @@ body
     align-items: end
     margin: 0
     font: 36px $font-stack
-    color: $primary-color
+    color: white
     padding-left: 15vw
     padding-right: 15vw
     padding-bottom: 50px
@@ -67,7 +67,7 @@ body
     align-items: start
     margin: 0
     font: 16px $font-stack
-    color: $primary-color
+    color: white
     padding-left: 15vw
     padding-right: 15vw
     text-align: center
@@ -121,6 +121,13 @@ a.button2:hover
 a.button2:active
     background: white
 
+a.button3:hover
+    background: rgba(255,255,255,1)
+    color: black
+
+a.button3:active
+    background: white
+
 .titles-grid
     width: 100%
     display: grid
@@ -142,6 +149,9 @@ a.button2:active
     display: none
     grid-template-columns: 1fr
     justify-items: center
+    padding-bottom: 20px
+    background-image: url(/home/arthur/SL/src/img/bgcontent.jpg)
+    position: relative
 
 .title-block
     width: 100%
@@ -150,6 +160,7 @@ a.button2:active
     grid-template-rows: 80% 20%
     justify-items: center
     align-items: center
+    background-color: #f1f1f1
 
 .hex-block
     position: relative
@@ -165,6 +176,10 @@ a.button2:active
     padding-bottom: 5px
     padding-left: 10px
     padding-right: 5px
+
+#title-idea.title-block__icon1
+    filter: invert(1)
+    
 
 .title-block__icon
     position: absolute
@@ -187,32 +202,39 @@ a.button2:active
 .block_content
     display: grid
     grid-template-columns: 100%
+    width: 70vw
 
 .hex
     position: absolute
 
+.disc-content
+    display: grid
+
+
 .disc:nth-child(odd)
     display: grid
-    grid-template-columns: 440px calc(100% - 440px)
+    grid-template-columns: 1fr 1fr
     justify-content: space-between
     height: auto
-    min-height: 450px
+    min-height: 350px
     width: 100%
     border-bottom: 1px solid #666
     border-top: 1px solid #666
 
 .disc:nth-child(even)
     display: grid
-    grid-template-columns: calc(100% - 440px) 440px
+    grid-template-columns: 1fr 1fr
     justify-content: space-between
     height: auto
-    min-height: 450px
+    min-height: 350px
     width: 100%
     border-bottom: 1px solid #666
     border-top: 1px solid #666
 
 .disc-сont
     display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
     justify-items: start
     align-items: center
     padding: 10px
@@ -222,23 +244,18 @@ a.button2:active
     font: 36px $font-stack
     color: black
     font-weight: bold
-    padding-left: 20px
-    padding-right: 20px
     margin-top: 10px
     margin-bottom: 10px
     background-color: #f1f1f1
-    min-width: 400px
 
 .disc__text
+    display: grid
+    justify-items: start
     font: 25px $font-stack
     color: black
-    font-weight: bold
-    padding-left: 20px
-    padding-right: 20px
     margin-top: 10px
     margin-bottom: 10px
     background-color: #f1f1f1
-    min-width: 400px
 
 .disc__img
     width: 100%
@@ -252,23 +269,14 @@ a.button2:active
 .disc__img img
     width: 300px
     height: 300px
-    border-radius: 400px
+    border-radius: 300px
     box-shadow: 0 0 0 3px transparent, 0 0 13px #333
-
-.nti-disc:nth-child(odd)
-    display: grid
-    grid-template-rows: 440px calc(100% - 440px)
-    justify-content: space-between
-    height: 400px
-    width: 100%
-    border-top: 1px solid #666
 
 .nti-disc:nth-child(even)
     display: grid
     grid-template-rows: 50% 50%
     justify-content: space-between
-    height: 400px
-    width: 100%
+    width: 70vw
     border-top: 1px solid #666
 
 .nti-disc-сont
@@ -286,7 +294,6 @@ a.button2:active
     margin-top: 10px
     margin-bottom: 10px
     background-color: #f1f1f1
-    min-width: 400px
 
 .nti-disc__text
     font: 25px $font-stack
@@ -294,10 +301,8 @@ a.button2:active
     font-weight: bold
     padding-left: 20px
     padding-right: 20px
-    margin-top: 10px
-    margin-bottom: 10px
+    padding-bottom: 10px
     background-color: #f1f1f1
-    min-width: 400px
 
 .nti-disc__img
     width: 100%
@@ -308,16 +313,14 @@ a.button2:active
     align-items: center
     background-color: #f1f1f1
 
-.nti-disc__img1 img
-    width: 300px
-    height: 300px
-    border-radius: 400px
-    box-shadow: 0 0 0 3px transparent, 0 0 13px #333
+.nti-disc__img img
+    width: 100%
+    height: auto
 
 .footer-title
     text-align: center
     font: 36px $font-stack
-    color: white
+    color: $primary-color
     font-weight: bold
     margin: 0
     padding: 0
@@ -357,6 +360,7 @@ a.button2:active
     justify-content: center
     padding: 25px
     padding-bottom: 10px
+    background-image: url(/home/arthur/SL/src/img/bgcontent.jpg)
 
 .news-content div:nth-child(5n - 2)   
     grid-column: 3 / 5
@@ -420,7 +424,7 @@ a.button2:active
     background-size: cover
 
 .news-nav
-    padding-top: 15px
+    padding-top: 20px
     padding-bottom: 15px
     background-color: black
 
@@ -464,7 +468,22 @@ a.button3
     padding-bottom: 10px 
     cursor: pointer
 
+.news-wrapper
+    background-image: url(/home/arthur/SL/src/img/bgcontent.jpg)
+
+
 .projects-content__title:hover
+    color: #fff
+
+a.nav-list__link:link
+    text-decoration: none
+a.nav-list__link:visited 
+    text-decoration: none
+    color: #adadad
+a.nav-list__link:active
+    text-decoration: none
+a.nav-list__link:hover 
+    text-decoration: none
     color: #fff
 
 h1 a:link
@@ -484,34 +503,38 @@ h1 a:hover
 .prev
     cursor: pointer
     position: absolute
-    left: 0
-    color: black
-    font-weight: bold
-    font-size: 18px
-    transition: 0.6s ease
+    // transition: 0.6s ease
     border-radius: 0 3px 3px 0
     box-sizing: border-box
+    transform: rotate(180deg)
+    padding: 5px
+    top: calc((176px - 62px) / 2)
+    left: calc((100% - 500px) / 2)
+    width: 60px
+    height: 65px
 
 .next
     cursor: pointer
     position: absolute
-    right: 20px
-    color: black
-    font-weight: bold
-    font-size: 18px
-    transition: 0.6s ease
+    // transition: 0.6s ease
     border-radius: 0 3px 3px 0
+    box-sizing: border-box
+    padding: 5px
+    top: calc((176px - 62px) / 2)
+    left: calc( (100% - 984px) / 2 + 678px )
+    width: 60px
+    height: 65px
 
 .slide-buttons
     width: 100%
-    height: 30px
+    // height: 55px
 
 .next 
     right: 0
     border-radius: 3px 0 0 3px
 
 .prev:hover, .next:hover 
-    background-color: rgba(205,205,205,0.8)
+    background-color: rgba(255,255,255,0.8)
     border: solid 1px black
 
 
@@ -534,3 +557,80 @@ h1 a:hover
         opacity: .4
     to 
         opacity: 1
+
+@media all and (max-width: 820px)
+
+    .block_content
+        width: 100vw
+    
+    .prev
+        left: calc((100% - 350px) / 2)
+    
+    .next  
+        left: calc( (100% - 1134px) / 2 + 678px )
+    
+    .news-content
+        grid-template-columns: repeat(1, 1fr)
+
+    .news-content div:nth-child(n)   
+        grid-column: 1 / 1
+
+    .main-content__title
+        font: 0.7em $font-stack
+
+    .main-content__text
+        font: 0.7em $font-stack
+
+    .main-content
+        display: block
+        width: 100%
+        height: auto
+        background-color: rgba(0, 0, 0, 0.5)
+
+    .main-overlay
+        height: auto
+
+    .main-content__title
+        display: block
+        // height: 100%
+        margin: 0
+        font: 3vw $font-stack
+        color: white
+        padding-left: 15vw
+        padding-right: 15vw
+        padding-bottom: 5vh
+        font-weight: bold
+        text-align: center
+
+    .buttons
+        padding: 0
+        height: 100%
+
+    .nav-list
+        padding: 0
+
+    .projects-content__title
+        font: 0.7em $font-stack
+
+    .disc:nth-child(odd)
+        grid-template-columns: 1fr
+
+    .disc:nth-child(even)
+        grid-template-columns: 1fr
+
+    .nti-disc:nth-child(2n)
+        width: 100vw
+        grid-template-rows: 30% 70%
+
+    .nti-disc-сont
+        display: block
+        height: 100%
+
+    .nti-disc__text
+        font: 13px $font-stack
+
+    .disc__text
+        font: 13px $font-stack
+
+    .partners
+        grid-template-columns: 1fr 1fr 1fr

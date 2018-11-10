@@ -5,14 +5,14 @@ var status = (response) => {
     }
     return Promise.resolve(response)
 }
-var json = function (response) {
+var json = (response) => {
     return response.json()
 }
 
 fetch('https://www.skyleap.ru:3050/news')
     .then(status)
     .then(json)
-    .then(function (data) {
+    .then( (data) => {
         let newsblock = document.getElementById('news-content');
         let voirblock = document.getElementById('news-nav-list__item1');
         let nskblock = document.getElementById('news-nav-list__item2');

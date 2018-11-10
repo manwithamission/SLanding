@@ -91,9 +91,9 @@ window.onload = () => {
     function showSlides(n, parentslide) {
         
         var i;
-        console.log(parentslide);
+        // console.log(parentslide);
         var slides = parentslide.getElementsByClassName('block_content');
-        console.log(n, slides.length)
+        // console.log(n, slides.length)
         if (n > slides.length) {
             slideIndex = 1
         }

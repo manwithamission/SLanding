@@ -13,16 +13,18 @@ fetch('https://www.skyleap.ru:3050/news')
     .then(status)
     .then(json)
     .then( (data) => {
-        let newsblock = document.getElementById('news-content');
-        let voirblock = document.getElementById('news-nav-list__item1');
-        let nskblock = document.getElementById('news-nav-list__item2');
-        let itblock = document.getElementById('news-nav-list__item3');
-        let techblock = document.getElementById('news-nav-list__item4');
-        let bussinesblock = document.getElementById('news-nav-list__item5');
-        let vrarblock = document.getElementById('news-nav-list__item6');
-        let studyblock = document.getElementById('news-nav-list__item7');
-        let academblock = document.getElementById('news-nav-list__item8');
-        let blockchainblock = document.getElementById('news-nav-list__item9');
+        var newsblock = document.getElementById('news-content');
+        var newsList = document.getElementsByClassName('news-nav-list__item');
+        var sourceList = [
+                        data[0],
+                        data[4].concat(data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13]),
+                        data[19].concat(data[32], data[43]),
+                        data[3].concat(data[17], data[14], data[15], data[41], data[42], data[45]),
+                        data[2].concat(data[50], data[44], data[46], data[47], data[56], data[57], data[58]),
+                        data[24].concat(data[25], data[26], data[27], data[28], data[29], data[30], data[31]), 
+                        data[48].concat(data[49], data[1], data[33], data[34]),
+                        data[35].concat(data[36]),
+                        data[16].concat(data[18], data[20], data[21], data[22], data[23], data[37], data[38])];
 
         function mapformer(source) {
             var newsarray = source.map(news => {
@@ -61,41 +63,9 @@ fetch('https://www.skyleap.ru:3050/news')
 
         render(preprocess(data[0]));
 
-        voirblock.onclick = () => {
-            render(preprocess(data[0]));
-        }
-
-        nskblock.onclick = () => {
-            render(preprocess(data[4].concat(data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13])));
-        }
-
-        itblock.onclick = () => {
-            render(preprocess(data[19].concat(data[32],data[43])));
-        }
-
-        techblock.onclick = () => {
-            render(preprocess(data[3].concat(data[17],data[14],data[15],data[41],data[42],data[45])));
-        }
-        
-        bussinesblock.onclick = () => {
-            render(preprocess(data[2].concat(data[50],data[44],data[46],data[47],data[56],data[57],data[58])));
-        }
-
-        vrarblock.onclick = () => {
-            render(preprocess(data[24].concat(data[25],data[26],data[27],data[28],data[29],data[30],data[31])));
-        }
-
-        studyblock.onclick = () => {
-            render(preprocess(data[48].concat(data[49],data[1],data[33],data[34])));
-        }
-
-        academblock.onclick = () => {
-            render(preprocess(data[35].concat(data[36])));
-        }
-
-        blockchainblock.onclick = () => {
-            render(preprocess(data[16].concat(data[18],data[20],data[21],data[22],data[23],data[37],data[38])));
-        }
+        Array.from(newsList).forEach( (section, i) => {
+            section.onclick = () => render(preprocess(sourceList[i]));
+        })
 
     })
     .catch(function (error) {

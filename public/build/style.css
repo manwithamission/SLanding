@@ -5,14 +5,21 @@ body {
   padding: 0;
   margin: 0; }
 
+.wrapper {
+  background-image: url(/home/arthur/SL/src/img/bgcontent.jpg);
+  background-size: cover;
+  padding-top: 100px; }
+
 .header {
   width: 100%;
   height: 100px;
   display: grid;
   grid-template-columns: 150px 1fr;
   align-items: center;
-  background-color: black;
-  border-bottom: 1px solid #666; }
+  background-color: #222;
+  border-bottom: 1px solid #666;
+  position: fixed;
+  z-index: 1000; }
 
 .logo {
   width: 150px;
@@ -28,18 +35,21 @@ body {
   font: 16px "Roboto", sans-serif;
   color: #adadad; }
 
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center; }
+
 .main-overlay {
-  padding: 0;
   margin: 0;
-  width: 100%;
-  height: calc(90vh - 100px);
+  width: 70vw;
   background-image: url(/home/arthur/SL/src/img/bg.jpg);
   background-size: cover;
   border-bottom: 1px solid #666; }
 
 .main-content {
-  width: 100%;
-  height: calc(90vh - 100px);
+  margin: 0;
+  width: 70vw;
   background-color: rgba(0, 0, 0, 0.5); }
 
 .main-content__title {
@@ -81,7 +91,7 @@ a.button1 {
   border: 2px solid;
   border-radius: 1px;
   transition: 0.2s;
-  background-color: black;
+  background-color: #222;
   width: 150px; }
 
 a.button2 {
@@ -96,7 +106,7 @@ a.button2 {
   border: 2px solid;
   border-radius: 1px;
   transition: 0.2s;
-  background-color: black;
+  background-color: #222;
   width: 150px; }
 
 a.button1:hover {
@@ -120,8 +130,13 @@ a.button3:hover {
 a.button3:active {
   background: white; }
 
+.titles-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center; }
+
 .titles-grid {
-  width: 100%;
+  width: 70vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; }
 
@@ -134,7 +149,7 @@ a.button3:active {
   padding-bottom: calc((98px - 48px) / 2);
   font-weight: bold;
   text-align: center;
-  background-color: black;
+  background-color: #222;
   border-bottom: 1px solid #666; }
 
 .grid-content {
@@ -142,7 +157,6 @@ a.button3:active {
   grid-template-columns: 1fr;
   justify-items: center;
   padding-bottom: 20px;
-  background-image: url(/home/arthur/SL/src/img/bgcontent.jpg);
   position: relative; }
 
 .title-block {
@@ -307,19 +321,20 @@ a.button3:active {
   width: 100%;
   height: auto; }
 
+.footer {
+  background-color: #222; }
+
 .footer-title {
   text-align: center;
   font: 36px "Roboto", sans-serif;
   color: #adadad;
   font-weight: bold;
   margin: 0;
-  padding: 0;
-  background-color: black; }
+  padding: 0; }
 
 .partners {
   display: grid;
   grid-template-columns: 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857%;
-  background-color: black;
   justify-items: center;
   align-items: center; }
 
@@ -339,17 +354,16 @@ a.button3:active {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  background-color: black;
   padding-top: 10px; }
 
 .news-content {
+  background-color: transparent;
+  width: 70vw;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: minmax(300px, 300px);
-  justify-content: center;
-  padding: 25px;
-  padding-bottom: 10px; }
+  justify-content: center; }
 
 .news-content div:nth-child(5n - 2) {
   grid-column: 3 / 5; }
@@ -385,7 +399,7 @@ a.button3:active {
   font-weight: bold;
   position: absolute;
   margin-top: 0;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, black 30%, black);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #222 30%, #222);
   z-index: 1000;
   width: 100%;
   height: auto;
@@ -414,7 +428,7 @@ a.button3:active {
 .news-nav {
   padding-top: 20px;
   padding-bottom: 15px;
-  background-color: black; }
+  background-color: #222; }
 
 .news-nav-list__item {
   display: inline;
@@ -447,7 +461,7 @@ a.button3 {
   border: 2px solid;
   border-radius: 1px;
   transition: 0.2s;
-  background-color: black;
+  background-color: #222;
   width: 150px; }
 
 .load-button {
@@ -457,8 +471,11 @@ a.button3 {
   cursor: pointer; }
 
 .news-wrapper {
-  background-image: url(/home/arthur/SL/src/img/bgcontent.jpg);
-  background-size: cover; }
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-size: cover;
+  padding-top: 20px; }
 
 .projects-content__title:hover {
   color: #fff; }
@@ -523,10 +540,6 @@ h1 a:hover {
 .next {
   right: 0;
   border-radius: 3px 0 0 3px; }
-
-.prev:hover, .next:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: solid 1px black; }
 
 .fade {
   -webkit-animation-name: fade;

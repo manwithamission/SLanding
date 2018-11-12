@@ -48,7 +48,7 @@ fetch('https://www.skyleap.ru:3050/news')
 
         function preprocess(source) {
             newsarray = mapformer(source);
-            newsblock.innerHTML = newsarray.slice(0, 10).join('');
+            newsblock.innerHTML = newsarray.slice(0, 9).join('');
     
             return newsarray;
         }

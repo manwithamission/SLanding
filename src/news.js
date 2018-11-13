@@ -56,15 +56,20 @@ fetch('https://www.skyleap.ru:3050/news')
         function render(newsarray) {
             var counter = 0;
             document.getElementById('load-button').onclick = () => {
-                counter = counter + 10;
+                counter = counter + 9;
                 newsblock.innerHTML = (newsblock.innerHTML).concat(newsarray.slice(counter, counter + 10).join(''));
             }
         }
 
+        newsList[0].style.backgroundColor = "green";
+
         render(preprocess(data[0]));
 
         Array.from(newsList).forEach( (section, i) => {
-            section.onclick = () => render(preprocess(sourceList[i]));
+            section.onclick = () =>  {
+                render(preprocess(sourceList[i]));
+                Array.from(newsList).map( (sec, j) => sec.style.backgroundColor = i === j ? "green" : "#222");
+            }
         })
 
     })

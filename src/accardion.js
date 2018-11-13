@@ -5,7 +5,9 @@ window.onload = () => {
     grids[0].style.display = "grid";
 
     Array.from(acc).forEach( (accardion, i) => {
-        accardion.onclick = () => grids.map( (g, j) => g.style.display = i !== j ? "none" : "grid");
+        accardion.onclick = () => {
+            grids.map( (g, j) => g.style.display = i !== j ? "none" : "grid");
+        }
     })
 
     var slideIndex = 1;
@@ -18,13 +20,11 @@ window.onload = () => {
 
     showSlides(slideIndex, document.getElementById('grid-project'));
 
-    for (var i = 0; i < PrevProjectButtons.length; i++) {
-        PrevProjectButtons[i].onclick = (() => {
-            return () => {
-                plusSlides(-1, document.getElementById('grid-project'));
-            }
-        })(i);
-    }
+    PrevProjectButtons.forEach( (prevbutton) => {
+        prevbutton.onclick = ( () => {
+            plusSlides(-1, document.getElementById('grid-project'));
+        });
+    });
 
     for (var i = 0; i < NextProjectButtons.length; i++) {
         NextProjectButtons[i].onclick = (() => {

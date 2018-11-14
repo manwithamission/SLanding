@@ -19,10 +19,8 @@ window.onscroll = () => {
         logo.style.width = "300px";
         nav.style.paddingBottom = "50px";
         nav.style.paddingTop = "50px";
-        // nav.style.paddingLeft = "50px";
         header.style.height = "119px";
         wrapper.style.paddingTop = "119px";
         header_content.style.gridTemplateColumns = "300px 1fr";
     }
-    console.log(scrolled + 'px');
 }

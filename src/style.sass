@@ -9,8 +9,8 @@ body
     margin: 0
 
 .wrapper
-    background-image: url(/home/arthur/SL/src/img/bgcontent.jpg)
-    background-size: cover
+    background-image: url(/home/arthur/SLanding/src/img/bgcontent.jpg)
+    background-repeat: repeat-x repeat-y
     padding-top: 119px 
 
 .header
@@ -27,7 +27,7 @@ body
     height: 119px
     // min-height: 119px
     filter: invert(1)
-    background-image: url(/home/arthur/SL/src/img/logo.svg)
+    background-image: url(/home/arthur/SLanding/src/img/logo.svg)
     background-size: 200% 200%
     background-position: 50% 50%
 
@@ -53,13 +53,13 @@ body
     display: grid
     grid-template-columns: 1fr
     justify-items: center
-    height: 80vh
+    height: 75vh
     // background-image: url(/home/arthur/SL/src/img/bgcontent.jpg)
 
 .main-overlay
     margin: 0
     width: 70vw
-    background-image: url(/home/arthur/SL/src/img/bg.jpg)
+    background-image: url(/home/arthur/SLanding/src/img/bg.jpg)
     background-size: cover
     border-bottom: 1px solid #666
 
@@ -189,6 +189,7 @@ a.button3:active
     justify-items: center
     align-items: center
     background-color: #f1f1f1
+    border: 1px solid #666
 
 .hex-block
     position: relative
@@ -231,6 +232,7 @@ a.button3:active
     display: grid
     grid-template-columns: 100%
     width: 70vw
+    border: solid 1px grey
 
 .hex
     position: absolute
@@ -238,34 +240,21 @@ a.button3:active
 .disc-content
     display: grid
 
-
-.disc:nth-child(odd)
+.disc
     display: grid
     grid-template-columns: 1fr 1fr
     justify-content: space-between
     height: auto
     min-height: 350px
     width: 100%
-    border-bottom: 1px solid #666
-    border-top: 1px solid #666
-
-.disc:nth-child(even)
-    display: grid
-    grid-template-columns: 1fr 1fr
-    justify-content: space-between
-    height: auto
-    min-height: 350px
-    width: 100%
-    border-bottom: 1px solid #666
-    border-top: 1px solid #666
 
 .disc-сont
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: 1fr
     justify-items: start
-    // align-items: center
     padding: 10px
+    padding-left: 50px
     background-color: #f1f1f1
 
 .disc__title
@@ -286,18 +275,17 @@ a.button3:active
     background-color: #f1f1f1
 
 .disc__img
-    width: 100%
     height: auto
     display: grid
     grid-template-columns: 1fr
     justify-items: center
     align-items: center
     background-color: #f1f1f1
+    padding: 10px
+    padding-right: 50px
 
 .disc__img img
     width: 100%
-    // height: 100%
-    // border-radius: 300px
     box-shadow: 0 0 0 3px transparent, 0 0 13px #333
 
 .nti-disc:nth-child(even)
@@ -394,17 +382,6 @@ a.button3:active
 
 .news-content div:nth-child(6n)   
     grid-column: 3 / 5
-
-// .news-block:nth-child(4n)
-//     position: relative
-//     width: 100%
-//     height: 300px
-//     border: solid 1px grey
-//     opacity: 1
-//     transition: opacity .2s ease-out
-//     -moz-transition: opacity .2s ease-out
-//     -webkit-transition: opacity .2s ease-out
-//     -o-transition: opacity .2s ease-out
 
 .news-block
     position: relative
@@ -541,58 +518,67 @@ h1 a:hover
 .showing
     opacity: 1
 
-// .prev
-//     cursor: pointer
-//     position: absolute
-//     border-radius: 0 3px 3px 0
-//     box-sizing: border-box
-//     transform: rotate(180deg)
-//     padding: 5px
-//     top: calc((176px - 62px) / 2)
-//     left: calc((100% - 500px) / 2)
-//     width: 60px
-//     height: 65px
+.prev
+    cursor: pointer
+    position: absolute
+    border-radius: 0 3px 3px 0
+    box-sizing: border-box
+    padding: 5px
+    width: 50px
+    height: 50px
+    left: 15vw
+    top: 50vh
+    background-color: transparent
 
-// .next
-//     cursor: pointer
-//     position: absolute
-//     border-radius: 0 3px 3px 0
-//     box-sizing: border-box
-//     padding: 5px
-//     top: calc((176px - 62px) / 2)
-//     left: calc( (100% - 984px) / 2 + 678px )
-//     width: 60px
-//     height: 65px
+.prev img
+    width: 100%
 
-// .slide-buttons
-//     width: 100%
+.next img
+    width: 100%
 
-// .next 
-//     right: 0
-//     border-radius: 3px 0 0 3px
+.next
+    cursor: pointer
+    position: absolute
+    border-radius: 0 3px 3px 0
+    box-sizing: border-box
+    transform: rotate(180deg)
+    padding: 5px
+    width: 50px
+    height: 50px
+    right: 15vw
+    top: 50vh
+    background-color: transparent
 
-// .prev:hover, .next:hover 
-//     background-color: rgba(255,255,255,0.8)
-//     border: solid 1px black
+.slide-buttons
+    width: 100vw
+    height: 50px
+    position: absolute
+
+.prev:hover, .next:hover 
+    background-color: #222
+    border: solid 1px black
+
+.prev img:hover, .next img:hover
+    filter: invert(1)
 
 
 .fade 
     -webkit-animation-name: fade
-    -webkit-animation-duration: .5s
+    -webkit-animation-duration: .2s
     animation-name: fade
-    animation-duration: .5s
+    animation-duration: .2s
 
 
 @-webkit-keyframes fade 
     from 
-        opacity: .4
+        opacity: .3
     to 
         opacity: 1
 
 
 @keyframes fade 
     from 
-        opacity: .4
+        opacity: .3
     to 
         opacity: 1
 
@@ -606,12 +592,6 @@ h1 a:hover
 
     .block_content
         width: 100vw
-    
-    .prev
-        left: calc((100% - 350px) / 2)
-    
-    .next  
-        left: calc( (100% - 1134px) / 2 + 678px )
     
     .news-content
         width: 100vw
@@ -654,7 +634,6 @@ h1 a:hover
         text-align: center
 
     .buttons
-        // padding: 0
         height: 100%
 
     .projects-content__title
@@ -665,6 +644,17 @@ h1 a:hover
 
     .disc:nth-child(even)
         grid-template-columns: 1fr
+
+    .disc__img
+        padding: 10px
+        padding-right: 50px
+        padding-left: 50px
+
+    .disc__text
+        padding-top: 10px
+        padding-bottom: 10px
+        // padding-left: 50px
+        padding-right: 50px
 
     .nti-disc:nth-child(2n)
         width: 100vw
@@ -681,7 +671,7 @@ h1 a:hover
         font: 13px $font-stack
 
     .partners
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 
     .news-nav-list
         grid-template-columns: 1fr 1fr 1fr
@@ -691,3 +681,20 @@ h1 a:hover
 
     .news-block__title
         font: 16px $font-stack
+
+    .prev
+        width: 50px
+        height: 50px
+        left: 0
+        top: 105vh
+
+    .next
+        width: 50px
+        height: 50px
+        right: 0
+        top: 105vh
+
+    .slide-buttons
+        width: 100vw
+        height: 50px
+        position: absolute

@@ -9,7 +9,7 @@ var json = (response) => {
     return response.json()
 }
 
-fetch('http://localhost:3050/news')
+fetch('https://skyleap.ru:3050/news')
     .then(status)
     .then(json)
     .then( (data) => {

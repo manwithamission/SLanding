@@ -45,9 +45,9 @@ setTimeout( () => {
     var menu_img = document.getElementById('menu-img');
     var navlist = document.getElementById('nav-list');
     var x = window.matchMedia("(max-width: 430px)")
-    
+    x.addListener(media430)
+
     if (x.matches) {
-        console.log("pidar");
         logo.style.height = "50px";
         logo.style.width = "150px";
         nav.style.paddingBottom = "15.5px";

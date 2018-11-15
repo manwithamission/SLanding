@@ -37,6 +37,30 @@ window.onscroll = () => {
 }
 
 setTimeout( () => {
+    var logo = document.getElementById('logo');
+    var nav = document.getElementById('menu-nav-list');
+    var header_content = document.getElementById('header-content');
+    var header = document.getElementById('header');
+    var wrapper = document.getElementById('wrapper');
+    var menu_img = document.getElementById('menu-img');
+    var navlist = document.getElementById('nav-list');
+    var x = window.matchMedia("(max-width: 430px)")
+    
+    if (x.matches) {
+        console.log("pidar");
+        logo.style.height = "50px";
+        logo.style.width = "150px";
+        nav.style.paddingBottom = "15.5px";
+        nav.style.paddingTop = "15.5px";
+        header.style.height = "50px";
+        wrapper.style.paddingTop = "50px";
+        header_content.style.gridTemplateColumns = "150px 1fr";
+        menu_img.style.width = "100px";
+        menu_img.style.height = "50px";
+        menu_img.style.padding = "0";
+        navlist.style.paddingTop = "5px";
+    }
+
     menuicon = document.getElementById('menu-img');
     nav = document.getElementById('menu-nav-list');
     menuicon.onclick = () => {

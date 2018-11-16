@@ -4,6 +4,7 @@ window.onload = () => {
     var acc_link = document.getElementsByClassName('projects-content__title__link');
     var grids = [document.getElementById('grid-project'), document.getElementById('grid-group'), document.getElementById('grid-patent')];
     grids[0].style.display = "grid";
+    acc_link[0].style.color = "#fff";
 
     Array.from(acc).forEach( (accardion, i) => {
         accardion.onclick = () => {

@@ -34,9 +34,10 @@ window.onscroll = () => {
         menu_img.style.height = "50px";
         menu_img.style.padding = "0";
         navlist.style.paddingTop = "5px";
-        Array.from(nav_list_name).forEach( (name) => {
-            name.style.marginTop = "5px";
-        });
+        // Array.from(nav_list_name).forEach( (name) => {
+        //     name.style.marginTop = "5px";
+        //     name.style.marginBottom = "0px";
+        // });
         voir_list__link.style.gridTemplateColumns = "50px 1fr";
         voir_list__link.style.gridTemplateRows = "1fr";
         voir_list__link.style.alignItems = "center";
@@ -50,12 +51,12 @@ window.onscroll = () => {
         menu_img.style.height = "100px";
         menu_img.style.paddingTop = "8.5px";
         menu_img.style.paddingBottom = "8.5px";
-        // nav_list__item.style.alignItems = "center";
         voir_list__link.style.gridTemplateColumns = "1fr";
         voir_list__link.style.gridTemplateRows = "28px 19px";
-        Array.from(nav_list_name).forEach( (name) => {
-            name.style.marginBottom = "0px";
-        });
+        // Array.from(nav_list_name).forEach( (name) => {
+        //     name.style.marginTop = "5px";
+        //     name.style.marginBottom = "0px";
+        // });
     }
 }
 

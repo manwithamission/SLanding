@@ -539,7 +539,8 @@ a.button3 {
   width: 150px; }
 
 .nav-list__name {
-  margin-top: 5px; }
+  margin-top: 5px;
+  margin-bottom: 0px; }
 
 .load-button {
   text-align: center;

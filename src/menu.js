@@ -40,7 +40,7 @@ window.onscroll = () => {
         // });
         voir_list__link.style.gridTemplateColumns = "50px 1fr";
         voir_list__link.style.gridTemplateRows = "1fr";
-        voir_list__link.style.alignItems = "center";
+        // voir_list__link.style.alignItems = "center";
     } else {
         logo.style.height = "119px";
         logo.style.width = "300px";

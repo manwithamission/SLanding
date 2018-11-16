@@ -43,6 +43,7 @@ body
 .menu-nav-list
     display: none
     margin: 0
+    margin-top: -5px
     padding-left: 0
     background-color: #222  
     transition: 1s
@@ -105,8 +106,6 @@ body
     display: grid
     grid-template-rows: 28px 19px
 
-// .voir-nav-list__link p
-//     margin-bottom: 0 
 .main-content__title2
     margin: 0
     font: 26px $font-stack
@@ -797,7 +796,7 @@ h1 a:hover
         justify-items: end
 
     .menu-img
-        width: 150px
-        height: 100px
-        padding-top: 8.5px
-        padding-bottom: 8.5px
+        width: 100px
+        height: 50px
+        padding-top: calc((121px - 50px) / 2)
+        padding-bottom: calc((121px - 50px) / 2)

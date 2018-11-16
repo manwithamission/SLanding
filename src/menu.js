@@ -34,29 +34,20 @@ window.onscroll = () => {
         menu_img.style.height = "50px";
         menu_img.style.padding = "0";
         navlist.style.paddingTop = "5px";
-        // Array.from(nav_list_name).forEach( (name) => {
-        //     name.style.marginTop = "5px";
-        //     name.style.marginBottom = "0px";
-        // });
         voir_list__link.style.gridTemplateColumns = "50px 1fr";
         voir_list__link.style.gridTemplateRows = "1fr";
-        // voir_list__link.style.alignItems = "center";
     } else {
         logo.style.height = "119px";
         logo.style.width = "300px";
         header.style.height = "119px";
         wrapper.style.paddingTop = "119px";
         header_content.style.gridTemplateColumns = "300px 1fr";
-        menu_img.style.width = "150px";
-        menu_img.style.height = "100px";
-        menu_img.style.paddingTop = "8.5px";
-        menu_img.style.paddingBottom = "8.5px";
+        menu_img.style.width = "100px";
+        menu_img.style.height = "50px";
+        menu_img.style.paddingTop = "calc((121px - 50px) / 2)";
+        menu_img.style.paddingBottom = "calc((121px - 50px) / 2)";
         voir_list__link.style.gridTemplateColumns = "1fr";
         voir_list__link.style.gridTemplateRows = "28px 19px";
-        // Array.from(nav_list_name).forEach( (name) => {
-        //     name.style.marginTop = "5px";
-        //     name.style.marginBottom = "0px";
-        // });
     }
 }
 

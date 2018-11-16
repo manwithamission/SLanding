@@ -1,11 +1,13 @@
 window.onload = () => {
     console.log('Документ и все ресурсы загружены');
     var acc = document.getElementsByClassName('projects-content__title');
+    var acc_link = document.getElementsByClassName('projects-content__title__link');
     var grids = [document.getElementById('grid-project'), document.getElementById('grid-group'), document.getElementById('grid-patent')];
     grids[0].style.display = "grid";
 
     Array.from(acc).forEach( (accardion, i) => {
         accardion.onclick = () => {
+            Array.from(acc_link).map( (g, j) => g.style.color = i !== j ? "#adadad" : "#fff" );
             grids.map( (g, j) => g.style.display = i !== j ? "none" : "grid");
             showSlides(1, grids[i]);
         }

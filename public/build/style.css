@@ -498,13 +498,13 @@ a.button3:active {
   justify-items: center; }
 
 .news-nav {
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: #222;
   width: 70vw;
   border: solid 1px grey; }
 
 .news-nav-list__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: inline;
   font: 12px "Roboto", sans-serif;
   color: #adadad;

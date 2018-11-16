@@ -7,6 +7,20 @@ window.onscroll = () => {
     var wrapper = document.getElementById('wrapper');
     var menu_img = document.getElementById('menu-img');
     var navlist = document.getElementById('nav-list');
+    var nav_list_link = document.getElementsByClassName('nav-list__link');
+    var nav_list_name = document.getElementsByClassName('nav-list__name');
+    var voir_list__link = document.getElementById('voir-nav-list__link');
+    var nav_list__item = document.getElementById('nav-list__item');
+
+    Array.from(nav_list_link).forEach( (link) => {
+        if (scrolled > 1) {
+            link.style.gridTemplateRows = "1fr";
+            link.style.gridTemplateColumns = "35px 1fr";
+        } else {
+            link.style.gridTemplateRows = "28px 19px";
+            link.style.gridTemplateColumns = "1fr";
+        }
+    });
 
     if (scrolled > 1) {
         logo.style.height = "50px";
@@ -20,11 +34,15 @@ window.onscroll = () => {
         menu_img.style.height = "50px";
         menu_img.style.padding = "0";
         navlist.style.paddingTop = "5px";
+        Array.from(nav_list_name).forEach( (name) => {
+            name.style.marginTop = "5px";
+        });
+        voir_list__link.style.gridTemplateColumns = "50px 1fr";
+        voir_list__link.style.gridTemplateRows = "1fr";
+        voir_list__link.style.alignItems = "center";
     } else {
         logo.style.height = "119px";
         logo.style.width = "300px";
-        nav.style.paddingBottom = "0px";
-        nav.style.paddingTop = "0px";
         header.style.height = "119px";
         wrapper.style.paddingTop = "119px";
         header_content.style.gridTemplateColumns = "300px 1fr";
@@ -32,7 +50,12 @@ window.onscroll = () => {
         menu_img.style.height = "100px";
         menu_img.style.paddingTop = "8.5px";
         menu_img.style.paddingBottom = "8.5px";
-        navlist.style.paddingTop = "40px";
+        // nav_list__item.style.alignItems = "center";
+        voir_list__link.style.gridTemplateColumns = "1fr";
+        voir_list__link.style.gridTemplateRows = "28px 19px";
+        Array.from(nav_list_name).forEach( (name) => {
+            name.style.marginBottom = "0px";
+        });
     }
 }
 

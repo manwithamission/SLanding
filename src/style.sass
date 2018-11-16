@@ -51,7 +51,8 @@ body
 .menu-nav-list__item
     display: block
     font: 14px $font-stack
-    padding: 0
+    padding-top: 0
+    padding-bottom: 0
     padding-left: 15px
     padding-right: 15px
     color: $primary-color
@@ -59,7 +60,7 @@ body
 
 .menu-nav-list__link
     display: grid
-    grid-template-columns: 28px 90%
+    grid-template-columns: 41.8px 90%
     justify-items: start
     grid-gap: 5px
     align-items: center
@@ -72,43 +73,64 @@ body
 .menu-nav-list__img
     width: 28px
     height: 28px
+    padding-left: 6.9px
     filter: invert(1)
 
 .menu-nav-list__voir
-    width: 28px
     height: 28px
+    filter: grayscale(100%) brightness(95%) contrast(156%) invert(100%)
 
 .nav-list__link p
     display: inline  
     margin-bottom: 0 
 
 .nav-list__link
-    width: 100%
-    height: 100%
+    display: grid
+    grid-template-rows: 28px 19px
 
 .nav-list
     margin: 0
-    display: inline
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
     padding-left: 0
-    height: 50px
-    min-width: 450px
-    padding-top: 40px
+    min-width: 470px
 
 .nav-list__item
-    display: inline
+    display: grid
+    align-items: center
     font: 16px $font-stack
     color: $primary-color
+
+.voir-nav-list__link
+    display: grid
+    grid-template-rows: 28px 19px
+
+// .voir-nav-list__link p
+//     margin-bottom: 0 
+.main-content__title2
+    margin: 0
+    font: 26px $font-stack
+    padding-left: 2vw
+    padding-right: 2vw
+    padding-bottom: 20vh
+    font-weight: bold
+    text-align: center
+    color: #fefefe
+    opacity: 0.6
 
 .main-wrapper
     display: grid
     grid-template-columns: 1fr
     justify-items: center
     height: 75vh
-    // background-image: url(/home/arthur/SL/src/img/bgcontent.jpg)
+
+.voir-menu-nav-list__name
+    padding-left: 20px
 
 .main-overlay
     margin: 0
     width: 70vw
+    height: 100%
     background-image: url(/home/arthur/SLanding/src/img/bg.jpg)
     background-size: cover
     border-bottom: 1px solid #666
@@ -117,7 +139,7 @@ body
     margin: 0
     width: 70vw
     background-color: rgba(0, 0, 0, 0.5)
-    height: 80vh
+    height: 75vh
 
 .main-content__title
     margin: 0
@@ -525,6 +547,9 @@ a.button3
     background-color: #222
     width: 150px
 
+.nav-list__name
+    margin-top: 5px
+
 .load-button
     text-align: center
     padding-top: 10px
@@ -541,6 +566,17 @@ a.button3
 
 
 .projects-content__title:hover
+    color: #fff
+
+a.voir-nav-list__link:link
+    text-decoration: none
+a.voir-nav-list__link:visited
+    text-decoration: none
+    color: #adadad
+a.voir-nav-list__link:active
+    text-decoration: none
+a.voir-nav-list__link:hover
+    text-decoration: none
     color: #fff
 
 a.nav-list__link:link
@@ -589,13 +625,15 @@ h1 a:hover
     height: 50px
     left: 15vw
     top: 50vh
-    background-color: transparent
+    background-color: #222
 
 .prev img
     width: 100%
+    filter: invert(1)
 
 .next img
     width: 100%
+    filter: invert(1)
 
 .next
     cursor: pointer
@@ -608,7 +646,7 @@ h1 a:hover
     height: 50px
     right: 15vw
     top: 50vh
-    background-color: transparent
+    background-color: #222
 
 .slide-buttons
     width: 100vw
@@ -616,11 +654,10 @@ h1 a:hover
     position: absolute
 
 .prev:hover, .next:hover 
-    background-color: #222
-    border: solid 1px black
+    background-color: transparent
 
 .prev img:hover, .next img:hover
-    filter: invert(1)
+    filter: invert(0)
 
 
 .fade 
@@ -676,7 +713,7 @@ h1 a:hover
     .main-content
         display: block
         width: 100%
-        height: 80vh
+        height: 75vh
         background-color: rgba(0, 0, 0, 0.5)
 
     .main-overlay
